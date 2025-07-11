@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Smartphone, Globe, Cpu, Drone, Shield, Zap } from 'lucide-react';
+import { Smartphone, Globe, Cpu, Plane, Shield, Zap } from 'lucide-react';
 
 const ServicesSection = () => {
   const services = [
@@ -17,7 +16,7 @@ const ServicesSection = () => {
       color: 'tech-accent'
     },
     {
-      icon: Drone,
+      icon: Plane,
       title: 'UAV/UGV Systems',
       description: 'Advanced unmanned aerial and ground vehicle systems for various commercial applications.',
       color: 'tech-success'
