@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -72,7 +73,26 @@ export default {
 					accent: '#06B6D4',
 					success: '#10B981',
 					warning: '#F59E0B',
-				}
+					neutral: {
+						50: '#F8FAFC',
+						100: '#F1F5F9',
+						200: '#E2E8F0',
+						300: '#CBD5E1',
+						400: '#94A3B8',
+						500: '#64748B',
+						600: '#475569',
+						700: '#334155',
+						800: '#1E293B',
+						900: '#0F172A'
+					}
+				},
+				nx: {
+				  'dark-green': '#032A1D',
+				  'ash-gray': '#A5BDB6',
+				  'castleton-green': '#0F5644',
+				  'cambridge-blue': '#7A9890',
+				  'mint-cream': '#DFE7E1',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -135,6 +155,27 @@ export default {
 				'glow': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' }
+				},
+				'morph': {
+					'0%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
+					'50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' },
+					'100%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' }
+				},
+				'gradient-x': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'stagger-1': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'stagger-2': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'stagger-3': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
@@ -145,9 +186,14 @@ export default {
 				'scale-in': 'scale-in 0.3s ease-out',
 				'slide-up': 'slide-up 0.5s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite alternate'
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'morph': 'morph 8s ease-in-out infinite',
+				'gradient-x': 'gradient-x 15s ease infinite',
+				'stagger-1': 'stagger-1 0.6s ease-out 0.1s both',
+				'stagger-2': 'stagger-2 0.6s ease-out 0.2s both',
+				'stagger-3': 'stagger-3 0.6s ease-out 0.3s both'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;
